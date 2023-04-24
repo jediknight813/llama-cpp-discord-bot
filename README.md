@@ -118,5 +118,5 @@ bot_allowed_command_roles = ['admin']
  If you don't want the bot to reply in every channel on the server, add the channel name to the bot_allowed_channels in the settings.py file.
  
  ```python 
- bot_allowed_channels = ['general]
+ bot_allowed_channels = ['general']
  ```
