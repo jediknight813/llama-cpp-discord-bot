@@ -61,12 +61,20 @@ To change the bot name go to the settings.py file and change this to whatever yo
 
 ## Bot Personality
 To change the bot Personality go to the settings.py file and change this to whatever you like, keep in mind that the longer this is the more time it will take for the bot to respond.
+
 ``` bot_personality = 'you are a chatbot named llama-bot, and you never fail to answer the users questions with experience and precision.' ```
 
 ## Bot Profile Picture
+
 Add the image you want for the bot in the images folder, then go to the setting.py folder and change the bot_image path.
 ``` bot_image = './images/default.png' ```
 
 ## bot permissions
+
 If you don't want users without permissions running the bot commands (change model, list_models, shutdown) add the role name to the bot_allowed_channels in the settings.py file.
+
 ``` bot_allowed_command_roles = ['admin'] ```
+
+ If you don't want the bot to reply in every channel on the server, add the channel name to the bot_allowed_channels in the settings.py file.
+ 
+ ``` bot_allowed_channels = ['general] ```
