@@ -51,3 +51,22 @@ llm_model_path = './models/ggml-vicuna-7b-1.1-q4_0.bin'
 
 5. Build the container ``` docker build -t llama-cpp-discord-bot:latest . ```
 6. Run the container ``` docker run llama-cpp-discord-bot:latest . ```
+
+# Customization
+I've tried to make it as easy as possible to customize the bot the settings.py file.
+
+## Bot Name 
+To change the bot name go to the settings.py file and change this to whatever you like.
+``` bot_name = 'llama-bot' ```
+
+## Bot Personality
+To change the bot Personality go to the settings.py file and change this to whatever you like, keep in mind that the longer this is the more time it will take for the bot to respond.
+``` bot_personality = 'you are a chatbot named llama-bot, and you never fail to answer the users questions with experience and precision.' ```
+
+## Bot Profile Picture
+Add the image you want for the bot in the images folder, then go to the setting.py folder and change the bot_image path.
+``` bot_image = './images/default.png' ```
+
+## bot permissions
+If you don't want users without permissions running the bot commands (change model, list_models, shutdown) add the role name to the bot_allowed_channels in the settings.py file.
+``` bot_allowed_command_roles = ['admin'] ```
