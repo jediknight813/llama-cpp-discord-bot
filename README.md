@@ -10,30 +10,34 @@ This Discord bot, which is written in Python and uses the Discord.py library, le
 ![Screen Shot 2023-04-24 at 4 34 42 PM](https://user-images.githubusercontent.com/17935336/234122023-23e9c60d-cf4e-4282-ad17-26b25b047c8b.png)
 
 ## List All Models Command.
-This will list every model in your models folder.
+You can list every model in your models folder with the following command:
 ```python 
 /list_models 
 ```
+This will provide you with a list of all the models available to the bot.
 
 ![Screen Shot 2023-04-24 at 4 37 46 PM](https://user-images.githubusercontent.com/17935336/234123323-5c0c6c92-17f1-4ac1-b420-fa08815290e4.png)
 
 ## Switch Model Command.
-Put the name of the model you want to switch to.
+To switch to a different model, simply specify the name of the model you want to switch to:
 ```python 
 /change_model {model_name} 
 ```
+This will change the bot's active model.
 
 ![Screen Shot 2023-04-24 at 4 38 16 PM](https://user-images.githubusercontent.com/17935336/234123353-179b632c-809b-412d-9323-391500099623.png)
 
 ## Shutdown bot Command.
-Shuts down the bot.
+To shut down the bot, use the following command:
 ```python
 /shutdown 
 ```
+This will terminate the bot.
 
 ![Screen Shot 2023-04-24 at 5 07 20 PM](https://user-images.githubusercontent.com/17935336/234127186-a4cb0ffc-37b5-45fa-92f5-6d608a739685.png)
 
 # Quick Setup
+To get started quickly, follow these steps:
 
 1. Clone this repository:
 ```bash 
