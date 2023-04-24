@@ -8,11 +8,13 @@ This Discord bot is written in Python and uses the Discord.py library, it utiliz
 ![Screen Shot 2023-04-24 at 4 34 42 PM](https://user-images.githubusercontent.com/17935336/234122023-23e9c60d-cf4e-4282-ad17-26b25b047c8b.png)
 
 ## list all models command.
+This will list every model in your models folder.
 ``` /list_models ```
 
 ![Screen Shot 2023-04-24 at 4 37 46 PM](https://user-images.githubusercontent.com/17935336/234123323-5c0c6c92-17f1-4ac1-b420-fa08815290e4.png)
 
-## switch model model command.
+## switch model command.
+Put the name of the model you want to switch to.
 ``` /change_model {model_name} ```
 
 ![Screen Shot 2023-04-24 at 4 38 16 PM](https://user-images.githubusercontent.com/17935336/234123353-179b632c-809b-412d-9323-391500099623.png)
