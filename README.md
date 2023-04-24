@@ -59,7 +59,7 @@ python scripts/main.py
 ```
 
 # Using Docker
-Make sure you have docker desktop installed.
+Make sure you have docker desktop installed and running.
 
 1. Clone this repository: 
 ```bash 
