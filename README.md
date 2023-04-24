@@ -32,5 +32,5 @@ discord_bot_token = '1234'
 llm_model_path = './models/ggml-vicuna-7b-1.1-q4_0.bin'
 ```
 
-5. build the container ``` docker build -t llama-cpp-discord-bot:latest . ```
+5. Build the container ``` docker build -t llama-cpp-discord-bot:latest . ```
 6. Run the container ``` docker run llama-cpp-discord-bot:latest . ```
