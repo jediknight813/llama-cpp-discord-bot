@@ -1,6 +1,6 @@
 # llama-cpp-discord-bot
 
-This Discord bot is written in Python and uses the Discord.py library, it utilizes the llama-cpp-python bindings to generate responses.
+This Discord bot, which is written in Python and uses the Discord.py library, leverages the llama-cpp-python bindings to generate responses. It offers several commands for controlling the bot and interacting with the models it has access to.
 
 ## basic chatbot mode.
 ```python 
