@@ -9,7 +9,7 @@ Install the dependencies: pip install -r requirements.txt
 
 Add your discord bot token to the settings.py file.
 ```python
-discord_bot_token = ''  <---
+discord_bot_token = ''
 ```
 
 Run the bot: python scripts/main.py
