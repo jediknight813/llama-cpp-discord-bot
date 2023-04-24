@@ -2,7 +2,7 @@
 
 This Discord bot is written in Python and uses the Discord.py library, it utilizes the llama-cpp-python bindings to generate responses.
 
-# Installation
+# Quick Setup
 
 1. Clone the repository: git clone https://github.com/jediknight813/llama-cpp-discord-bot.git
 2. Install the dependencies: pip install -r requirements.txt
