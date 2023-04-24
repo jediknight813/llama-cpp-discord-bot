@@ -11,8 +11,8 @@ This Discord bot is written in Python and uses the Discord.py library, it utiliz
 ```python
 discord_bot_token = '1234'
 ```
-4. add a llama.cpp compatible model in the models folder.
-5. set the model path in the settings.py file.
+4. Add a llama.cpp compatible model in the models folder.
+5. Set the model path in the settings.py file.
 ```python
 llm_model_path = './models/ggml-vicuna-7b-1.1-q4_0.bin'
 ```
