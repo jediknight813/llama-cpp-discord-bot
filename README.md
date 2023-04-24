@@ -22,6 +22,7 @@ Put the name of the model you want to switch to.
 ## Shutdown bot Command.
 Shuts down the bot.
 ``` /shutdown ```
+
 ![Screen Shot 2023-04-24 at 5 07 20 PM](https://user-images.githubusercontent.com/17935336/234127186-a4cb0ffc-37b5-45fa-92f5-6d608a739685.png)
 
 # Quick Setup
