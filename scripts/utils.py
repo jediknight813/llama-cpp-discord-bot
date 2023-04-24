@@ -2,8 +2,6 @@ import subprocess
 import openai
 from settings import bot_personality, max_tokens, llm_model_path, bot_name, bot_image
 import os
-from psutil import process_iter
-from signal import SIGTERM
 openai.api_key = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" # can be anything
 openai.api_base = "http://localhost:8000/v1"
 
@@ -31,21 +29,18 @@ def get_llama_models():
 
 
 async def start_up(client):
-
     # starts up the llama server.
     command = "export MODEL="+llm_model_path+"; python3 -m llama_cpp.server"
     subprocess.Popen(command, shell=True)
 
     # changes the bot name.
-    
-    # for guild in client.guilds:
-    #     await guild.me.edit(nick=bot_name)
+    for guild in client.guilds:
+        await guild.me.edit(nick=bot_name)
 
     # sets the bot profile image.
-
-    # fp = open(bot_image, 'rb')
-    # pfp = fp.read()
-    # await client.user.edit(avatar=pfp)
+    fp = open(bot_image, 'rb')
+    pfp = fp.read()
+    await client.user.edit(avatar=pfp)
 
     # sync the bot commands.
     await client.tree.sync()

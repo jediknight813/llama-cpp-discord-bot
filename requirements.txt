@@ -2,4 +2,3 @@ discord.py
 llama-cpp-python
 llama-cpp-python[server]
 openai
-psutil

@@ -1,0 +1,17 @@
+FROM python:3.9.9-bullseye
+
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install -y nodejs
+
+WORKDIR /src
+
+COPY requirements.txt ./
+RUN pip3 install -r requirements.txt
+
+COPY models ./models/
+COPY images ./images/
+COPY scripts ./scripts/
+
+ENV HOST=0.0.0.0
+
+ENTRYPOINT ["python3", "scripts/main.py"]

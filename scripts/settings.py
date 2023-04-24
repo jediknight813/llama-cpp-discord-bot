@@ -1,5 +1,5 @@
 discord_bot_token = ''
-llm_model_path = './models/ggml-vicuna-7b-1.1-q4_0.bin'
+llm_model_path = './models/'
 max_tokens = 50
 
 bot_personality = 'you are a chatbot named llama-bot, and you never fail to answer the users questions with experience and precision.'
