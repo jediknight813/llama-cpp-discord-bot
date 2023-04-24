@@ -4,12 +4,12 @@ This Discord bot is written in Python and uses the Discord.py library, it utiliz
 
 # Installation
 
-Clone the repository: git clone https://github.com/jediknight813/llama-cpp-discord-bot.git
-Install the dependencies: pip install -r requirements.txt
+1. Clone the repository: git clone https://github.com/jediknight813/llama-cpp-discord-bot.git
+2. Install the dependencies: pip install -r requirements.txt
 
 Add your discord bot token to the settings.py file.
 ```python
 discord_bot_token = ''
 ```
 
-Run the bot: python scripts/main.py
+3. Run the bot: python scripts/main.py
