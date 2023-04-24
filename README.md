@@ -36,7 +36,7 @@ Shuts down the bot.
 # Quick Setup
 
 1. Clone this repository:
-```python 
+```bash 
 git clone https://github.com/jediknight813/llama-cpp-discord-bot.git 
 ```
 3. Install the dependencies: 
@@ -54,14 +54,14 @@ discord_bot_token = '1234'
 llm_model_path = './models/ggml-vicuna-7b-1.1-q4_0.bin'
 ```
 6. Run the bot: 
-```python scripts/main.py
+```python 
+scripts/main.py
 ```
-
 
 # Using Docker
 
 1. Clone this repository: 
-```python 
+```bash 
 git clone https://github.com/jediknight813/llama-cpp-discord-bot.git 
 ```
 4. Set your discord bot token to the settings.py file.
@@ -74,8 +74,14 @@ discord_bot_token = '1234'
 llm_model_path = './models/ggml-vicuna-7b-1.1-q4_0.bin'
 ```
 
-5. Build the container ``` docker build -t llama-cpp-discord-bot:latest . ```
-6. Run the container ``` docker run llama-cpp-discord-bot:latest . ```
+5. Build the container 
+```bash 
+docker build -t llama-cpp-discord-bot:latest . 
+```
+7. Run the container 
+```bash 
+docker run llama-cpp-discord-bot:latest . 
+```
 
 # Customization
 I've tried to make it as easy as possible to customize the bot the settings.py file.
