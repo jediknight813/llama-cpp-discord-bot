@@ -19,6 +19,11 @@ Put the name of the model you want to switch to.
 
 ![Screen Shot 2023-04-24 at 4 38 16 PM](https://user-images.githubusercontent.com/17935336/234123353-179b632c-809b-412d-9323-391500099623.png)
 
+## switch model command.
+Shuts down the bot.
+``` /shutdown ```
+![Screen Shot 2023-04-24 at 5 07 20 PM](https://user-images.githubusercontent.com/17935336/234127186-a4cb0ffc-37b5-45fa-92f5-6d608a739685.png)
+
 # Quick Setup
 
 1. Clone this repository: ``` git clone https://github.com/jediknight813/llama-cpp-discord-bot.git ```
