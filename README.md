@@ -4,7 +4,7 @@ This Discord bot is written in Python and uses the Discord.py library, it utiliz
 
 # Quick Setup
 
-1. Clone the repository: ``` git clone https://github.com/jediknight813/llama-cpp-discord-bot.git ```
+1. Clone this repository: ``` git clone https://github.com/jediknight813/llama-cpp-discord-bot.git ```
 2. Install the dependencies: ``` pip install -r requirements.txt ```
 
 3. Set your discord bot token to the settings.py file.
@@ -21,7 +21,7 @@ llm_model_path = './models/ggml-vicuna-7b-1.1-q4_0.bin'
 
 # Using Docker
 
-1. Clone the repository: ``` git clone https://github.com/jediknight813/llama-cpp-discord-bot.git ```
+1. Clone this repository: ``` git clone https://github.com/jediknight813/llama-cpp-discord-bot.git ```
 2. Set your discord bot token to the settings.py file.
 ```python
 discord_bot_token = '1234'
