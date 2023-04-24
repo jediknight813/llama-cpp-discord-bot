@@ -88,7 +88,7 @@ docker build -t llama-cpp-discord-bot:latest .
 ```
 6. Run it
 ```bash 
-docker run llama-cpp-discord-bot:latest . 
+docker run llama-cpp-discord-bot:latest
 ```
 
 # Customization
