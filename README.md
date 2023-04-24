@@ -49,7 +49,10 @@ pip install -r requirements.txt
 discord_bot_token = '1234'
 ```
 4. Add a llama.cpp compatible model in the models folder.
-![Screen Shot 2023-04-24 at 5 23 43 PM](https://user-images.githubusercontent.com/17935336/234129495-bfcf34ae-26fb-48c4-af53-9e9383be4fa9.png)
+ 
+![Screen Shot 2023-04-24 at 5 23 43 PM](https://user-images.githubusercontent.com/17935336/234129631-1667f4a8-2ffd-4303-83a5-d55795b16008.png)
+
+
 6. Set the model path in the settings.py file.
 ```python
 llm_model_path = './models/ggml-vicuna-7b-1.1-q4_0.bin'
@@ -71,8 +74,10 @@ git clone https://github.com/jediknight813/llama-cpp-discord-bot.git
 discord_bot_token = '1234'
 ```
 3. Add a llama.cpp compatible model in the models folder.
+
 ![Screen Shot 2023-04-24 at 5 23 43 PM](https://user-images.githubusercontent.com/17935336/234129495-bfcf34ae-26fb-48c4-af53-9e9383be4fa9.png)
-5. Set the model path in the settings.py file.
+
+4. Set the model path in the settings.py file.
 ```python
 llm_model_path = './models/ggml-vicuna-7b-1.1-q4_0.bin'
 ```
