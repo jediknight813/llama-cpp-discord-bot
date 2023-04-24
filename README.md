@@ -27,8 +27,14 @@ Shuts down the bot.
 
 # Quick Setup
 
-1. Clone this repository: ```python git clone https://github.com/jediknight813/llama-cpp-discord-bot.git ```
-2. Install the dependencies: ```python pip install -r requirements.txt ```
+1. Clone this repository:
+```python 
+git clone https://github.com/jediknight813/llama-cpp-discord-bot.git 
+```
+3. Install the dependencies: 
+```python
+pip install -r requirements.txt
+```
 
 3. Set your discord bot token to the settings.py file.
 ```python
@@ -39,7 +45,9 @@ discord_bot_token = '1234'
 ```python
 llm_model_path = './models/ggml-vicuna-7b-1.1-q4_0.bin'
 ```
-6. Run the bot: ```python scripts/main.py ```
+6. Run the bot: 
+```python scripts/main.py
+```
 
 
 # Using Docker
@@ -64,24 +72,34 @@ I've tried to make it as easy as possible to customize the bot the settings.py f
 ## Bot Name 
 To change the bot name go to the settings.py file and change this to whatever you like.
 
-```python bot_name = 'llama-bot' ```
+```python
+bot_name = 'llama-bot'
+```
 
 ## Bot Personality
 To change the bot Personality go to the settings.py file and change this to whatever you like, keep in mind that the longer this is the more time it will take for the bot to respond.
 
-```python bot_personality = 'you are a chatbot named llama-bot, and you never fail to answer the users questions with experience and precision.' ```
+```python
+bot_personality = 'you are a chatbot named llama-bot, and you never fail to answer the users questions with experience and precision.' 
+```
 
 ## Bot Profile Picture
 
 Add the image you want for the bot in the images folder, then go to the setting.py folder and change the bot_image path.
-```python bot_image = './images/default.png' ```
+```python 
+bot_image = './images/default.png' 
+```
 
 ## bot permissions
 
 If you don't want users without permissions running the bot commands (change model, list_models, shutdown) add the role name to the bot_allowed_channels in the settings.py file.
 
-```python bot_allowed_command_roles = ['admin'] ```
+```python 
+bot_allowed_command_roles = ['admin']
+```
 
  If you don't want the bot to reply in every channel on the server, add the channel name to the bot_allowed_channels in the settings.py file.
  
- ```python bot_allowed_channels = ['general] ```
+ ```python 
+ bot_allowed_channels = ['general]
+ ```
