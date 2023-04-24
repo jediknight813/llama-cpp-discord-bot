@@ -55,7 +55,7 @@ llm_model_path = './models/ggml-vicuna-7b-1.1-q4_0.bin'
 ```
 6. Run the bot: 
 ```python 
-scripts/main.py
+python scripts/main.py
 ```
 
 # Using Docker
