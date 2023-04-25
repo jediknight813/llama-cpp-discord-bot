@@ -125,7 +125,7 @@ bot_image = './images/default.png'
 
 ## bot permissions
 
-If you don't want users without permissions running the bot commands (change model, list_models, shutdown) add the role name to the bot_allowed_channels in the settings.py file.
+If you don't want users without permissions running the bot commands (change model, list_models, shutdown) add the role name to the bot_allowed_command_roles in the settings.py file.
 
 ```python 
 bot_allowed_command_roles = ['admin']
