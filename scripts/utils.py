@@ -30,7 +30,7 @@ def get_llama_models():
 
 async def start_up(client):
     # starts up the llama server.
-    command = "export MODEL="+llm_model_path+"; python3 -m llama_cpp.server"
+    command = "python3 -m llama_cpp.server --model "+llm_model_path
     subprocess.Popen(command, shell=True)
 
     # changes the bot name.
@@ -51,6 +51,5 @@ def change_model(model):
     # kill the old llama server
     subprocess.run(['npx', 'kill-port', '8000'])          
     # start the llama server.
-    # command = "export MODEL="+model+"; python3 -m llama_cpp.server"
-    command = "python3 -m llama_cpp.server --model "+llm_model_path
+    command = "python3 -m llama_cpp.server --model "+model
     subprocess.Popen(command, shell=True)   
