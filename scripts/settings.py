@@ -14,3 +14,7 @@ bot_allowed_command_roles = []
 
 # this will set what will stop the text generation.
 stop_text_generation_on = ["###"]
+
+# A penalty applied to each token that is already generated. This helps prevent the model from repeating itself.
+# minimum: 0  default: 1.1
+bot_repeat_penalty = 1.1

@@ -1,6 +1,6 @@
 import subprocess 
 import openai
-from settings import bot_personality, max_tokens, llm_model_path, bot_name, bot_image, stop_text_generation_on
+from settings import bot_personality, max_tokens, llm_model_path, bot_name, bot_image, stop_text_generation_on, bot_repeat_penalty
 import os
 openai.api_key = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" # can be anything
 openai.api_base = "http://localhost:8000/v1"
@@ -13,7 +13,9 @@ def get_llama_response(question, model_path):
         model=model_path,
         prompt="\n\n### System: "+bot_personality+"\n\n### Instructions:\n"+question+"\n\n### Response:\n",
         max_tokens=max_tokens,
-        stop=stop_text_generation_on
+        stop=stop_text_generation_on,
+        repeat_penalty=bot_repeat_penalty,
+
     )
 
     return response['choices'][0]["text"]
