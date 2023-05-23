@@ -25,4 +25,4 @@ stop_text_generation_on = ["###"]
 bot_repeat_penalty = 1.1
 
 # this will set chat history limit, the question and response.
-chat_history_limit = os.getenv('chat_history_limit')
+chat_history_limit = int(os.getenv('chat_history_limit'))
