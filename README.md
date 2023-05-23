@@ -94,7 +94,7 @@ Make sure you have docker desktop installed and running.
 ```bash 
 git clone https://github.com/jediknight813/llama-cpp-discord-bot.git 
 ```
-4. Rename the .env.example file to .env.
+2. Rename the .env.example file to .env.
 
 ![Screen Shot 2023-05-23 at 4 11 17 PM](https://github.com/jediknight813/llama-cpp-discord-bot/assets/17935336/6e03b7de-ba62-479e-926e-1907271a56c6)
 
@@ -117,29 +117,40 @@ docker build -t llama-cpp-discord-bot:latest .
 docker run llama-cpp-discord-bot:latest
 ```
 
-# Customization
-I've tried to make it as easy as possible to customize the bot the settings.py file.
+# Bot Customization
+I've tried to make it as easy as possible to make a new bot personality.
 
-## Bot Name 
-To change the bot name go to the settings.py file and change this to whatever you like.
 
+Create a new json file with your bots name.
+![Screen Shot 2023-05-23 at 4 24 14 PM](https://github.com/jediknight813/llama-cpp-discord-bot/assets/17935336/c930fda8-4455-4804-be63-466e0e10c5b5)
+Then paste this in the file:
 ```python
-bot_name = 'llama-bot'
+{
+    "bot_personality": "",
+    "bot_name": "",
+    "bot_image": "./images/"
+}
 ```
-
 ## Bot Personality
-To change the bot Personality go to the settings.py file and change this to whatever you like, keep in mind that the longer this is the more time it will take for the bot to respond.
-
+Change this to whatever you like, keep in mind that the longer this is the more time it will take for the bot to respond.
 ```python
 bot_personality = 'you are a chatbot named llama-bot, and you never fail to answer the users questions with experience and precision.' 
 ```
 
 ## Bot Profile Picture
-
-Add the image you want for the bot in the images folder, then go to the setting.py folder and change the bot_image path.
+Add the image you want for the bot in the images folder and add it to your bots json file.
 ```python 
 bot_image = './images/default.png' 
 ```
+
+## Bot Name 
+Change this to whatever you like.
+```python
+bot_name = 'llama-bot'
+```
+
+
+# Bot Settings
 
 ## bot permissions
 
