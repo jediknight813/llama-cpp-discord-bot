@@ -23,8 +23,6 @@ def get_llama_response(question, model_path, current_bot_personality):
             chat_history_string += message_and_response["user_message"]
             chat_history_string += message_and_response["bot_message"]
 
-    print(chat_history_string)
-
     # using this lets us have an easy queue system for questions.
     response = openai.Completion.create(
         model=model_path,
@@ -32,7 +30,6 @@ def get_llama_response(question, model_path, current_bot_personality):
         max_tokens=max_tokens,
         stop=stop_text_generation_on,
         repeat_penalty=bot_repeat_penalty,
-
     )
 
     return response['choices'][0]["text"]
