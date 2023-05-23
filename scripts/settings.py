@@ -1,10 +1,15 @@
-discord_bot_token = ''
-llm_model_path = './models/'
-max_tokens = 100
+from dotenv import load_dotenv
+load_dotenv()
+import os
 
-bot_personality = 'you are a chatbot named llama-bot, and you never fail to answer the users questions with experience and precision.'
-bot_name = 'llama-bot'
-bot_image = './images/default.png'
+
+discord_bot_token = os.getenv('discord_bot_token')
+llm_model_path = os.getenv('llm_model_path')
+max_tokens = os.getenv('max_tokens')
+
+bot_personality = os.getenv('bot_personality')
+bot_name = os.getenv('bot_name')
+bot_image = os.getenv('bot_image')
 
 # leave empty for if you want to be able to talk to it from any channel.
 bot_allowed_channels = []
@@ -20,4 +25,4 @@ stop_text_generation_on = ["###"]
 bot_repeat_penalty = 1.1
 
 # this will set chat history limit, the question and response.
-chat_history_limit = 2
+chat_history_limit = os.getenv('chat_history_limit')
