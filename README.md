@@ -52,7 +52,7 @@ git clone https://github.com/jediknight813/llama-cpp-discord-bot.git
 pip install -r requirements.txt
 ```
 
-3. Set your discord bot token to the settings.py file.
+3. Set your discord bot token in the settings.py file.
 ```python
 discord_bot_token = '1234'
 ```
