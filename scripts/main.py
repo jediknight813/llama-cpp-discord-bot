@@ -1,5 +1,5 @@
 import discord
-from settings import discord_bot_token, llm_model_path, bot_allowed_channels, bot_allowed_command_roles
+from settings import discord_bot_token, llm_model_path, bot_allowed_channels, bot_allowed_command_roles, chat_history_limit
 from llama_cpp import Llama
 from utils import get_llama_response, start_up, get_llama_models, change_model
 from discord.ext import commands
@@ -9,6 +9,7 @@ llm = Llama(model_path=llm_model_path)
 intents = discord.Intents.default()
 intents.message_content = True
 client = commands.Bot(command_prefix='.', intents=discord.Intents.all())
+global_chat_history = []
 current_model = llm_model_path
 
 
@@ -82,9 +83,13 @@ async def on_message(server_message):
     if server_message.content.startswith('<@'+str(client.user.id)+'>') and len(server_message.content.split(' ')) >= 2 and allowed_channel == True:
         await server_message.channel.typing()
 
-        print(current_model)
         # generate the llama model response to the user question.
-        output = get_llama_response(server_message.content.replace('<@'+str(client.user.id)+'>', ""), current_model)
+        output = get_llama_response(server_message.content.replace('<@'+str(client.user.id)+'>', ""), current_model, global_chat_history)
+
+        # keeps a simple chat history.
+        global_chat_history.append( {"user_message": "\n### Instructions:\n"+server_message.content.replace('<@'+str(client.user.id)+'>', ""), "bot_message": "\n### Response:\n"+output+"\n"} )
+        if len(global_chat_history) > chat_history_limit:
+            global_chat_history.pop(0)
 
         # send llama response to the user.
         await server_message.channel.send(output, reference=server_message)

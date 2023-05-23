@@ -18,3 +18,6 @@ stop_text_generation_on = ["###"]
 # A penalty applied to each token that is already generated. This helps prevent the model from repeating itself.
 # minimum: 0  default: 1.1
 bot_repeat_penalty = 1.1
+
+# this will set chat history limit, the question and response.
+chat_history_limit = 2

@@ -6,12 +6,21 @@ openai.api_key = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" # can be anything
 openai.api_base = "http://localhost:8000/v1"
 
 
-def get_llama_response(question, model_path):
+def get_llama_response(question, model_path, chat_history):
+
+    # temp solution to handle chat history.
+    chat_history_string = ""
+    if len(chat_history) >= 1:
+        for message_and_response in chat_history:
+            chat_history_string += message_and_response["user_message"]+"\n"
+            chat_history_string += message_and_response["bot_message"]
+    # print("### System: "+bot_personality+chat_history_string+"\n\n### Instructions:\n"+question+"\n\n### Response:\n")
+
+
     # using this lets us have an easy queue system for questions.
-    print("\n\n### System: "+bot_personality+"\n\n### Instructions:\n"+question+"\n\n### Response:\n",)
     response = openai.Completion.create(
         model=model_path,
-        prompt="\n\n### System: "+bot_personality+"\n\n### Instructions:\n"+question+"\n\n### Response:\n",
+        prompt="### System: "+bot_personality+chat_history_string+"\n\n### Instructions:\n"+question+"\n\n### Response:\n",
         max_tokens=max_tokens,
         stop=stop_text_generation_on,
         repeat_penalty=bot_repeat_penalty,
