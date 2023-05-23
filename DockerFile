@@ -11,6 +11,9 @@ RUN pip3 install -r requirements.txt
 COPY models ./models/
 COPY images ./images/
 COPY scripts ./scripts/
+COPY bot_memories ./bot_memories/
+COPY bot_personalities ./bot_personalities/
+COPY .env ./
 
 ENV HOST=0.0.0.0
 

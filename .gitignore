@@ -2,3 +2,5 @@ models/*
 !models/put_model_files_in_here.txt
 .venv
 .DS_Store
+.env
+bot_memories/*
