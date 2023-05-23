@@ -2,6 +2,7 @@ import subprocess
 import openai
 from settings import bot_personality, max_tokens, llm_model_path, bot_name, bot_image, stop_text_generation_on, bot_repeat_penalty
 import os
+import pickle
 openai.api_key = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" # can be anything
 openai.api_base = "http://localhost:8000/v1"
 
@@ -9,12 +10,16 @@ openai.api_base = "http://localhost:8000/v1"
 def get_llama_response(question, model_path, chat_history):
 
     # temp solution to handle chat history, will need to look into a better long term memory solution.
+
+
     chat_history_string = ""
+
     if len(chat_history) >= 1:
         for message_and_response in chat_history:
             chat_history_string += message_and_response["user_message"]
             chat_history_string += message_and_response["bot_message"]
-
+            with open("history/chat_history", "wb") as fp:   #Pickling
+                pickle.dump(chat_history, fp)
 
     # using this lets us have an easy queue system for questions.
     response = openai.Completion.create(

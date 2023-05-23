@@ -3,13 +3,18 @@ from settings import discord_bot_token, llm_model_path, bot_allowed_channels, bo
 from llama_cpp import Llama
 from utils import get_llama_response, start_up, get_llama_models, change_model
 from discord.ext import commands
-
+import pickle
+import os
 
 llm = Llama(model_path=llm_model_path)
 intents = discord.Intents.default()
 intents.message_content = True
 client = commands.Bot(command_prefix='.', intents=discord.Intents.all())
-global_chat_history = []
+if os.path.isfile("history/chat_history"):
+    with open("history/chat_history", "rb") as fp:
+        global_chat_history = pickle.load(fp)
+else:
+    global_chat_history = []
 current_model = llm_model_path
 
 
