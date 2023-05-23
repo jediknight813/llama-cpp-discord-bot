@@ -63,7 +63,8 @@ pip install -r requirements.txt
  
 ![Screen Shot 2023-04-24 at 5 23 43 PM](https://user-images.githubusercontent.com/17935336/234129631-1667f4a8-2ffd-4303-83a5-d55795b16008.png)
 
-4. Rename the .env.example file to .env:
+4. Rename the .env.example file to .env.
+
 ![Screen Shot 2023-05-23 at 4 11 17 PM](https://github.com/jediknight813/llama-cpp-discord-bot/assets/17935336/6e03b7de-ba62-479e-926e-1907271a56c6)
 
 5. Set your discord bot token and model path in the .env file.
@@ -84,7 +85,8 @@ Make sure you have docker desktop installed and running.
 ```bash 
 git clone https://github.com/jediknight813/llama-cpp-discord-bot.git 
 ```
-4. Rename the .env.example file to .env:
+4. Rename the .env.example file to .env.
+
 ![Screen Shot 2023-05-23 at 4 11 17 PM](https://github.com/jediknight813/llama-cpp-discord-bot/assets/17935336/6e03b7de-ba62-479e-926e-1907271a56c6)
 
 3. Add a llama.cpp compatible model in the models folder.
