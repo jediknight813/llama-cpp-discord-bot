@@ -40,6 +40,14 @@ This will terminate the bot.
 
 ![Screen Shot 2023-04-24 at 5 07 20 PM](https://user-images.githubusercontent.com/17935336/234127186-a4cb0ffc-37b5-45fa-92f5-6d608a739685.png)
 
+## List All Bot Personalities Command.
+You can list every personality in your bot_personality folder with the following command:
+```python 
+/list_personalities
+```
+This will provide you with a list of all the personalities available to the bot.
+![Screen Shot 2023-05-23 at 4 05 43 PM](https://github.com/jediknight813/llama-cpp-discord-bot/assets/17935336/533e7603-e102-4634-9213-965419669332)
+
 # Quick Setup
 To get started quickly, follow these steps:
 
@@ -51,21 +59,20 @@ git clone https://github.com/jediknight813/llama-cpp-discord-bot.git
 ```python
 pip install -r requirements.txt
 ```
-
-3. Set your discord bot token in the settings.py file.
-```python
-discord_bot_token = '1234'
-```
-4. Add a llama.cpp compatible model in the models folder.
+3. Add a llama.cpp compatible model in the models folder.
  
 ![Screen Shot 2023-04-24 at 5 23 43 PM](https://user-images.githubusercontent.com/17935336/234129631-1667f4a8-2ffd-4303-83a5-d55795b16008.png)
 
+4. Rename the .env.example file to .env:
+![Screen Shot 2023-05-23 at 4 11 17 PM](https://github.com/jediknight813/llama-cpp-discord-bot/assets/17935336/6e03b7de-ba62-479e-926e-1907271a56c6)
 
-6. Set the model path in the settings.py file.
+5. Set your discord bot token and model path in the .env file.
 ```python
+discord_bot_token = '1234'
 llm_model_path = './models/ggml-vicuna-7b-1.1-q4_0.bin'
 ```
-7. Run the bot: 
+
+6. Run the bot: 
 ```python 
 python scripts/main.py
 ```
@@ -77,16 +84,16 @@ Make sure you have docker desktop installed and running.
 ```bash 
 git clone https://github.com/jediknight813/llama-cpp-discord-bot.git 
 ```
-2. Set your discord bot token to the settings.py file.
-```python
-discord_bot_token = '1234'
-```
+4. Rename the .env.example file to .env:
+![Screen Shot 2023-05-23 at 4 11 17 PM](https://github.com/jediknight813/llama-cpp-discord-bot/assets/17935336/6e03b7de-ba62-479e-926e-1907271a56c6)
+
 3. Add a llama.cpp compatible model in the models folder.
 
 ![Screen Shot 2023-04-24 at 5 23 43 PM](https://user-images.githubusercontent.com/17935336/234129495-bfcf34ae-26fb-48c4-af53-9e9383be4fa9.png)
 
-4. Set the model path in the settings.py file.
+4. Set your discord bot token and model path in the .env file.
 ```python
+discord_bot_token = '1234'
 llm_model_path = './models/ggml-vicuna-7b-1.1-q4_0.bin'
 ```
 
