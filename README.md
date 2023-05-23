@@ -48,6 +48,15 @@ You can list every personality in your bot_personality folder with the following
 This will provide you with a list of all the personalities available to the bot.
 ![Screen Shot 2023-05-23 at 4 05 43 PM](https://github.com/jediknight813/llama-cpp-discord-bot/assets/17935336/533e7603-e102-4634-9213-965419669332)
 
+## Switch Bot Personality Command.
+To switch to a different Personality, simply specify the name of the Personality you want to switch to:
+```python 
+/change_bot_personality {personality_name} 
+```
+This will change the bot's active personality.
+
+![Screen Shot 2023-05-23 at 4 15 18 PM](https://github.com/jediknight813/llama-cpp-discord-bot/assets/17935336/5fc2826c-5240-41b1-a2b2-f1f683adac87)
+
 # Quick Setup
 To get started quickly, follow these steps:
 
