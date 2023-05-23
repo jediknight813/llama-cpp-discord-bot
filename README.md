@@ -121,8 +121,10 @@ docker run llama-cpp-discord-bot:latest
 I've tried to make it as easy as possible to make a new bot personality.
 
 
-Create a new json file with your bots name.
+First create a new json file with your bots name.
+
 ![Screen Shot 2023-05-23 at 4 24 14 PM](https://github.com/jediknight813/llama-cpp-discord-bot/assets/17935336/c930fda8-4455-4804-be63-466e0e10c5b5)
+
 Then paste this in the file:
 ```python
 {
