@@ -18,7 +18,7 @@ def get_llama_response(question, model_path, chat_history):
         for message_and_response in chat_history:
             chat_history_string += message_and_response["user_message"]
             chat_history_string += message_and_response["bot_message"]
-            with open("history/chat_history", "wb") as fp:   #Pickling
+            with open("history/"+bot_name+"-chat_history", "wb") as fp:   #Pickling
                 pickle.dump(chat_history, fp)
 
     # using this lets us have an easy queue system for questions.

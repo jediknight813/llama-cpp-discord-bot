@@ -10,8 +10,10 @@ llm = Llama(model_path=llm_model_path)
 intents = discord.Intents.default()
 intents.message_content = True
 client = commands.Bot(command_prefix='.', intents=discord.Intents.all())
-if os.path.isfile("history/chat_history"):
-    with open("history/chat_history", "rb") as fp:
+bot_name = os.getenv('bot_name')
+if os.path.isfile("history/"+bot_name+"-chat_history"):
+
+    with open("history/"+bot_name+"-chat_history", "rb") as fp:
         global_chat_history = pickle.load(fp)
 else:
     global_chat_history = []
