@@ -100,6 +100,12 @@ def add_message(current_bot_personality, message):
 
 
 async def set_bot_personality(client, current_bot_personality):
+
+    db = TinyDB("./bot_memories/bot_state.json")
+    db.update({'bot_personality': current_bot_personality}) 
+    current_bot_personality = db.all()[0]["bot_personality"]
+    print(current_bot_personality)
+    
     bot_data = get_bot_data(current_bot_personality)
     # changes the bot name.
     for guild in client.guilds:

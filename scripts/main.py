@@ -4,10 +4,10 @@ from discord.ext import commands
 import os
 from dotenv import load_dotenv
 load_dotenv()
-from settings import bot_allowed_channels, bot_allowed_command_roles, chat_history_limit, bot_personality_file
+from settings import bot_allowed_channels, bot_allowed_command_roles, bot_personality_file
+from tinydb import TinyDB
 discord_bot_token = os.getenv('discord_bot_token')
 llm_model_path = os.getenv('llm_model_path')
-current_bot_personality = bot_personality_file
 
 
 intents = discord.Intents.default()
@@ -20,7 +20,10 @@ current_model = llm_model_path
 async def on_ready():
     print(f'We have logged in as {client.user}')
     await start_up(current_model)
-    await set_bot_personality(client, current_bot_personality)
+    db = TinyDB("./bot_memories/bot_state.json")
+    db.truncate()
+    db.insert({"bot_personality": bot_personality_file})
+    await set_bot_personality(client, bot_personality_file)
 
 
 @client.tree.command(name='shutdown', description='Shut down the bot.')
@@ -87,6 +90,9 @@ async def on_message(server_message):
     if server_message.content.startswith('<@'+str(client.user.id)+'>') and len(server_message.content.split(' ')) >= 2 and allowed_channel == True:
         await server_message.channel.typing()
 
+        db = TinyDB("./bot_memories/bot_state.json")
+        current_bot_personality = db.all()[0]["bot_personality"]
+
         # generate the llama model response to the user question.
         output = get_llama_response(server_message.content.replace('<@'+str(client.user.id)+'>', ""), current_model, current_bot_personality)
 
@@ -130,9 +136,8 @@ async def change_bot_personality(interaction: discord.Integration, personality_f
         await interaction.response.send_message(content='Incorrect bot personality name.')
         return
     
-    current_bot_personality = personality_file_name
-    await set_bot_personality(client, current_bot_personality)
-    await interaction.response.send_message(content='Swiched bot to '+current_bot_personality+" personality.")
+    await set_bot_personality(client, personality_file_name)
+    await interaction.response.send_message(content='Swiched bot to '+personality_file_name+" personality.")
 
 
 client.run(discord_bot_token)
