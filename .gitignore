@@ -4,3 +4,11 @@ models/*
 .DS_Store
 .env
 bot_memories/*
+!bot_memories/bot_memories.txt
+bot_personalities/*
+!modbot_personalitiesels/alienBot.json
+!bot_personalities/llamaBot.json
+!bot_personalities/template.json
+images/*
+!images/llama.png
+!images/alien.png
