@@ -38,7 +38,7 @@ def get_llama_response(question, model_path, current_bot_personality):
 def get_llama_models():
     models = []
     for file in os.listdir('./models'):
-        if file.endswith('.bin'):
+        if file.endswith('.ggml'):
             models.append(file)
 
     return models
