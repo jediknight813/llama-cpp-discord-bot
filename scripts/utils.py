@@ -38,7 +38,7 @@ def get_llama_response(question, model_path, current_bot_personality):
 def get_llama_models():
     models = []
     for file in os.listdir('./models'):
-        if file.endswith('.ggml'):
+        if file.endswith('.gguf'):
             models.append(file)
 
     return models
@@ -55,7 +55,7 @@ def get_bot_personalities():
 
 async def start_up(current_model):
     # starts up the llama server.
-    command = "python3 -m llama_cpp.server --model "+current_model
+    command = "python3 -m llama_cpp.server --model "+current_model+"--host 0.0.0.0 --port 8000"
     subprocess.Popen(command, shell=True)
 
 
@@ -64,7 +64,7 @@ def change_model(model):
     # kill the old llama server
     subprocess.run(['npx', 'kill-port', '8000'])          
     # start the llama server.
-    command = "python3 -m llama_cpp.server --model "+model
+    command = "python3 -m llama_cpp.server --model "+model+" --host 0.0.0.0 --port 8000"
     subprocess.Popen(command, shell=True)   
 
 
