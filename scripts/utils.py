@@ -55,7 +55,7 @@ def get_bot_personalities():
 
 async def start_up(current_model):
     # starts up the llama server.
-    command = "python3 -m llama_cpp.server --model "+current_model+"--host 0.0.0.0 --port 8000"
+    command = "python3 -m llama_cpp.server --model "+current_model+" --host 0.0.0.0 --port 8000"
     subprocess.Popen(command, shell=True)
 
 

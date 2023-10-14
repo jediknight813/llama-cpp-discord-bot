@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 load_dotenv()
 from settings import bot_allowed_channels, bot_allowed_command_roles, bot_personality_file
 from tinydb import TinyDB
-discord_bot_token = os.getenv('discord_bot_token')
-llm_model_path = os.getenv('llm_model_path')
+discord_bot_token = os.environ.get('discord_bot_token')
+llm_model_path = os.environ.get('llm_model_path')
 
 
 intents = discord.Intents.default()
@@ -23,7 +23,7 @@ async def on_ready():
     db = TinyDB("./bot_memories/bot_state.json")
     db.truncate()
     db.insert({"bot_personality": bot_personality_file})
-    await set_bot_personality(client, bot_personality_file)
+    # await set_bot_personality(client, bot_personality_file)
 
 
 @client.tree.command(name='shutdown', description='Shut down the bot.')
