@@ -1,6 +1,6 @@
 discord.py
 llama-cpp-python
 llama-cpp-python[server]
-openai
+openai==0.28.1
 python-dotenv
 tinydb
