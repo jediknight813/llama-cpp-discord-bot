@@ -19,3 +19,6 @@ bot_repeat_penalty = 1.1
 
 # this will set chat history limit, the question and response.
 chat_history_limit = 2
+
+# this set the number of gpu layers, 35 is good for a 7b model.
+gpu_layers = 0

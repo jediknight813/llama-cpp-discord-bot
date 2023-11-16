@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 openai.api_key = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" # can be anything
 openai.api_base = "http://localhost:8000/v1"
-from settings import max_tokens, stop_text_generation_on, bot_repeat_penalty, chat_history_limit
+from settings import max_tokens, stop_text_generation_on, bot_repeat_penalty, chat_history_limit, gpu_layers
 from tinydb import TinyDB, Query
 import json
 
@@ -55,7 +55,7 @@ def get_bot_personalities():
 
 async def start_up(current_model):
     # starts up the llama server.
-    command = "python3 -m llama_cpp.server --model "+current_model+" --host 0.0.0.0 --port 8000"
+    command = "python3 -m llama_cpp.server --model "+current_model+" --host 0.0.0.0 --port 8000"+" --n_gpu_layers "+str(gpu_layers)
     subprocess.Popen(command, shell=True)
 
 
@@ -64,7 +64,7 @@ def change_model(model):
     # kill the old llama server
     subprocess.run(['npx', 'kill-port', '8000'])          
     # start the llama server.
-    command = "python3 -m llama_cpp.server --model "+model+" --host 0.0.0.0 --port 8000"
+    command = "python3 -m llama_cpp.server --model "+model+" --host 0.0.0.0 --port 8000"+" --n_gpu_layers "+str(gpu_layers)
     subprocess.Popen(command, shell=True)   
 
 
